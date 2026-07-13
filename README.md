@@ -1,6 +1,6 @@
 # 📤 Telegram Auto Uploader
 
-A Python-based tool to automatically upload files to a Telegram channel or group. Built using Telethon, with support for:
+A (modified by FLOOF) Python-based tool to automatically upload files to a Telegram channel or group. Built using Telethon, with support for:
 
 - ✅ Uploading from current directory
 - ✅ Skipping already uploaded files
@@ -26,6 +26,7 @@ A Python-based tool to automatically upload files to a Telegram channel or group
 ```
 
 ##🔧 Configuration
+Copy .env.example to .env
   ```bash
   api_id = 'YOUR_API_ID'
   api_hash = 'YOUR_API_HASH'
