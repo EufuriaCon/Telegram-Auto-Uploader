@@ -26,7 +26,9 @@ A (modified by FLOOF) Python-based tool to automatically upload files to a Teleg
 ```
 
 ##🔧 Configuration
+
 Copy .env.example to .env
+
   ```bash
   api_id = 'YOUR_API_ID'
   api_hash = 'YOUR_API_HASH'
