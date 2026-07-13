@@ -90,13 +90,6 @@ for root, _, files in os.walk(upload_folder):
             print(f"[ERROR] Failed to send {file}: {e}")
             time.sleep(30)
 
-# ==== Send log summary to Saved Messages ====
-if uploaded_this_session:
-    summary = "✅ Uploaded files this session:\n" + "\n".join(uploaded_this_session)
-else:
-    summary = "📂 No new files were uploaded."
 
-client(SendMessageRequest('me', summary))  # 'me' means "Saved Messages"
-
-print("✅ Upload finished. Summary sent to Saved Messages.")
+print("✅ Upload finished.")
 client.disconnect()
