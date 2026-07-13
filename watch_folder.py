@@ -3,9 +3,19 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import subprocess
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+upload_folder = os.getcwd() + '/' + os.getenv('UPLOAD_FOLDER')
+    
+def create_watch_folder():
+    if not os.path.exists(upload_folder):
+        os.makedirs(upload_folder)
 
 class Watcher:
-    FOLDER_TO_WATCH = os.getcwd()
+    FOLDER_TO_WATCH = upload_folder
+    create_watch_folder()
 
     def __init__(self):
         self.observer = Observer()

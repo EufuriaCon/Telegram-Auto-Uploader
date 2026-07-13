@@ -1,0 +1,5 @@
+.env
+watch_folder
+
+upload_log.txt
+uploader_session.session
