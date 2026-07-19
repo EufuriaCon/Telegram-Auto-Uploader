@@ -1,4 +1,5 @@
 import time
+import sys
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import subprocess
@@ -35,7 +36,8 @@ class Handler(FileSystemEventHandler):
     def on_created(self, event):
         if not event.is_directory:
             print(f"[NEW FILE] {event.src_path}")
-            subprocess.call(["python", "telegram_uploader.py"])
+            uploader = os.path.join(os.path.dirname(os.path.abspath(__file__)), "telegram_uploader.py")
+            subprocess.call([sys.executable, uploader])
 
 if __name__ == '__main__':
     w = Watcher()

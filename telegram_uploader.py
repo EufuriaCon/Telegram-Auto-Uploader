@@ -75,8 +75,7 @@ print("🚀 Starting upload...")
 for root, _, files in os.walk(upload_folder):
     for file in tqdm(files, desc="Uploading files", unit="file"):
         file_path = os.path.join(root, file)
-        dow = get_day_of_week()
-        caption = 'Eufuria 2026: The Black Pawrade - ' + dow
+        caption = 'Eufuria 2026: The Black Pawrade - #Eufuria2026' # - ' + get_day_of_week()
 
         if not is_file_valid(file_path):
             continue
